@@ -24,7 +24,7 @@ public class PdfSampling2 extends JsonPathTesting {
 			secondList.add("And");
 			secondList.add("text");
 			 try {
-				inStream = new FileInputStream(".\\driver\\sample.pdf");
+				inStream = new FileInputStream(".\\driver\\purchaseReceipt_PDF.pdf");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
