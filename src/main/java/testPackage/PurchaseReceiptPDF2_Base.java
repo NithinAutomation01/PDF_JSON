@@ -22,21 +22,32 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class PurchaseReceiptPDF2  extends TempClass {
+public class PurchaseReceiptPDF2_Base  extends TempClass {
 	static FileOutputStream outputStream;
 	static InputStream inStream = null;
 	BufferedInputStream fp = null;
 	static String Path = "C:\\Users\\user\\Desktop\\test1.xlsx";
 	public static void main(String[] args) {
 		XSSFWorkbook workbook = new XSSFWorkbook();
-		 XSSFSheet sheet = workbook.createSheet("TestWritingtoExcel");
-		 Row row = sheet.createRow(0);
+		 XSSFSheet sheet = workbook.createSheet("Write2Excel");
+		 //Headers section
+		 Row rowtitle = sheet.createRow(0);
+		 Cell FieldValue = rowtitle.createCell(0);
+		 FieldValue.setCellValue("FieldValue");
+		 Cell JsonValue = rowtitle.createCell(1);
+		 JsonValue.setCellValue("Json Value");
+		 Cell PdfValue = rowtitle.createCell(2);
+		 PdfValue.setCellValue("PDF value");
+		 
+		 
+		 
+		 Row row = sheet.createRow(1);
 		 Cell customerId = row.createCell(0);
 		 customerId.setCellValue("CustomerID");
-		 Row row1 = sheet.createRow(1);
+		 Row row1 = sheet.createRow(2);
 		 Cell phoneNumber = row1.createCell(0);
 		 phoneNumber.setCellValue("Phone number");
-		 Row row2 = sheet.createRow(2);
+		 Row row2 = sheet.createRow(3);
 		 Cell billValue = row2.createCell(0);
 		 billValue.setCellValue("Bill value");
 		ArrayList<String> pdfObject = new ArrayList<String>();

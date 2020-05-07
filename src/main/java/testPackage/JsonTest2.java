@@ -25,12 +25,19 @@ public static void main(String[] args) throws ParseException
    JSONObject data =  (JSONObject) jsonObject.get("data");
    JSONObject customer =  (JSONObject) data.get("customer");
    JSONObject customerName =  (JSONObject) customer.get("customerName");
-  System.out.println(customer.get("customerId"));
+ /* System.out.println(customer.get("customerId"));
    System.out.println(customerName.get("firstName"));
    System.out.println(customerName.get("fullName"));
    
    System.out.println(data.get("lineInfoList"));
-   			
+   */
+   
+   JSONObject paymentInfolist =  (JSONObject) data.get("storeInfo");
+   System.out.println(paymentInfolist);
+   JSONObject totalpaidToday =  (JSONObject) paymentInfolist.get("totalPaidToday");
+   System.out.println(totalpaidToday);
+   
+  
    
  
 

@@ -23,5 +23,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/user/Downloads/pdfbox-app-2.0.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (6)/jackson-annotations-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (6)/jackson-core-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (6)/jackson-databind-2.11.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
