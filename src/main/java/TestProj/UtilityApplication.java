@@ -22,22 +22,13 @@ public class UtilityApplication extends ExcelHandler {
 		sc = new Scanner(System.in);
 System.out.println("please enter the Subroutine for which the validation to be performed");
 String next = sc.next();
-		
+   
+    JsonRequestReader jsonReader=new JsonRequestReader();	
 	JsonHandler jHandler = new JsonHandler();
 	ExcelHandler eHandler = new ExcelHandler(next);
 	PdfHandler pHandler=new PdfHandler();
-	JsonRequestReader jsonReader=new JsonRequestReader();
 	
-	
-//sfdgf
 
-	
-	/*// json logic to be implemented here
-	 if status code =200{entire flow 
-		 or System.exit(arg0);
-	 }
-	*/
-	
 	
 	//Iteration of PDf String objects
 	System.out.println("Iteration of Pdf Objects");
