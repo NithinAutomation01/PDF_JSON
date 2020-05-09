@@ -17,11 +17,7 @@ import java.util.stream.Collectors;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.FillPatternType;
-import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.simple.JSONObject;
@@ -33,7 +29,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.jayway.jsonpath.JsonPath;
 
-public class PurchaseReceiptPDF2_Base{
+public class PurchaseReceiptPDF2_Base4{
 	static FileOutputStream outputStream;
 	static InputStream inStream = null;
 	BufferedInputStream fp = null;
@@ -46,11 +42,9 @@ public class PurchaseReceiptPDF2_Base{
 	static String CurrentPlanPrice;
 	static String totalTaxes;
 	static String Path = "C:\\Users\\user\\Desktop\\Demofolder\\Result.xlsx";
-    static XSSFCellStyle Style ;
 	public static void main(String[] args) throws Exception, IOException, ParseException {
 		XSSFWorkbook workbook = new XSSFWorkbook();
-		 XSSFSheet sheet = workbook.createSheet("Purchase_Receipt");
-		 Style = workbook.createCellStyle();  
+		 XSSFSheet sheet = workbook.createSheet("Write2Excel");
 		 
 		 // Reading json data 
 			JSONParser parser = new JSONParser();
@@ -68,9 +62,9 @@ public class PurchaseReceiptPDF2_Base{
 	        RetailPrice = JsonPath.read(obj,"$.data.lineInfoList[0].cartLineDevice.retailPrice");
 	       CurrentPlanPrice = JsonPath.read(obj,"$.data.lineInfoList[0].cartLinePlan.planPrice");
 	       totalTaxes =  JsonPath.read(obj,"$.data.totalTaxes");
-	   
-	       for(int i =0;i<7;i++){
-	           sheet.setColumnWidth(i,7000);  
+	       
+	       for(int i =0;i<6;i++){
+	           sheet.setColumnWidth(i,5000);  
 	  		 }
 	      
 	      
@@ -86,8 +80,6 @@ public class PurchaseReceiptPDF2_Base{
 		 Result.setCellValue("Comparison Result");
 		 Cell Remarks = rowtitle.createCell(4);
 		 Remarks.setCellValue("Remarks");
-		 Cell Status = rowtitle.createCell(5);
-		 Status.setCellValue("Status");
 		 
 		 
 		 
@@ -174,18 +166,14 @@ public class PurchaseReceiptPDF2_Base{
 
 			}}*/
 		
-         
-          
-          
-		
 		System.out.println("The common list between the two are as follows");
 		for(String common : commonList){
 		System.out.println(common);
 		}
 
-		int count=0;
+			//telephone number validation
 		for(String z : commonList){
-			
+			int count=0;
 			if(telephonenumber.contains(z)){
 				
 				System.out.println(z);
@@ -195,23 +183,16 @@ public class PurchaseReceiptPDF2_Base{
 				 cust_pdf.setCellValue(z);
 			      Cell custome_message = row.createCell(3);
 				 custome_message.setCellValue("Telephone number is present and matches with the json");
-				 Cell color_val = row.createCell(5);
-				  color_val.setCellValue("PASS"); 
-				 
 			count++;
 			}
-		}if(count==0){
+		else{	if(count>=1){
 			Cell billValue_json = row.createCell(4);
 			billValue_json.setCellValue("Does not match with the json");
-			Cell cust_status = row.createCell(5);
-			  cust_status.setCellValue("FAIL"); 
-			 
-			}
+			}}
 			
-		 //Bill Amount validation
-		int count2=0;
+		}	 //Bill Amount validation
 		for(String z : commonList){
-			
+			int count=0;
 			if(billamt.contains(z)){
 				
 				System.out.println(z);
@@ -221,19 +202,14 @@ public class PurchaseReceiptPDF2_Base{
 				 customerId_pdf.setCellValue(z);
 			      Cell custome_message1 = row10.createCell(3);
 				 custome_message1.setCellValue("Bill Amount is present and matches with the json");
-				 Cell cust_val= row10.createCell(5);
-				 cust_val.setCellValue("PASS"); 
-				  
-			count2++;
+			count++;
 			}
-		}		if(count2==0){
+		else{	if(count>=1){
 			Cell billValue_json1 = row10.createCell(4);
 			billValue_json1.setCellValue("Does not match with the json");
-			Cell cust_status = row10.createCell(5);
-			 cust_status.setCellValue("FAIL"); 
-			}
+			}}
 			
-		
+		}
 		
 		// upgraded fee
 		int temp =0;
@@ -248,16 +224,11 @@ public class PurchaseReceiptPDF2_Base{
 				 cust_pdf.setCellValue(z);
 			      Cell custome_message = row11.createCell(3);
 				 custome_message.setCellValue("upgradedfee  is present and matches with the json");
-				 Cell cust_val= row11.createCell(5);
-				cust_val.setCellValue("PASS"); 
-				temp++;
+			temp++;
 			}}
 		if(temp==0){
-			Cell billValue_json1 = row11.createCell(4);
+			Cell billValue_json1 = row12.createCell(4);
 			billValue_json1.setCellValue("Does not match with the json");
-			Cell cust_status = row11.createCell(5);
-			  cust_status.setCellValue("FAIL"); 
-			 
 		}
 					
 		// display Name
@@ -273,19 +244,13 @@ public class PurchaseReceiptPDF2_Base{
 						 cust_pdf.setCellValue(z);
 					      Cell custome_message = row12.createCell(3);
 						 custome_message.setCellValue("Display Name  is present and matches with the json");
-						 Cell cust_val= row12.createCell(5);
-					     cust_val.setCellValue("PASS"); 
-				       temp1++;
+					temp1++;
 					}
 				}if(temp1==0){
 						Cell billValue_json1 = row12.createCell(4);
 						billValue_json1.setCellValue("Does not match with the json");
 						  Cell custome_message = row12.createCell(1);
 							 custome_message.setCellValue(displayName);
-							 Cell cust_status = row12.createCell(5);
-						  
-							 cust_status.setCellValue("FAIL"); 
-						
 				
 				}
 					
