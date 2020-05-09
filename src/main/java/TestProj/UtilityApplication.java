@@ -26,7 +26,14 @@ String next = sc.next();
 	JsonHandler jHandler = new JsonHandler();
 	ExcelHandler eHandler = new ExcelHandler(next);
 	PdfHandler pHandler=new PdfHandler();
+	JsonRequestReader jsonReader=new JsonRequestReader();
+
 	
+	/*// json logic to be implemented here
+	 if status code =200{entire flow 
+		 or System.exit(arg0);
+	 }
+	*/
 	
 	
 	//Iteration of PDf String objects
