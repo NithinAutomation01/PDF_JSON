@@ -20,8 +20,8 @@ public class UtilityApplication extends ExcelHandler {
 	static Scanner sc;
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
-System.out.println("please enter the Subroutine for which the validation to be performed");
-String next = sc.next();
+    System.out.println("please enter the Subroutine for which the validation to be performed");
+    String next = sc.next();
    
     JsonRequestReader jsonReader=new JsonRequestReader();	
 	JsonHandler jHandler = new JsonHandler();
@@ -44,6 +44,8 @@ String next = sc.next();
 		System.out.println("json values"+jsonValues);
 	}
 	
+	/*Comparison between the PDf and Json for getting common objects and adding to the
+	   common list arraylist*/
 	
 	for(String k : PdfHandler.pdfObject){
 		for(String m:JsonHandler.jsonObj1){

@@ -45,7 +45,7 @@ public class JsonRequestReader {
             .post();
             response.prettyPrint();
             int statuscode = response.getStatusCode();*/
-				int statuscode =202;
+				int statuscode =200;
             System.out.println(statuscode);
             if(statuscode!=200){
             	System.out.println("Application Failed to execute");

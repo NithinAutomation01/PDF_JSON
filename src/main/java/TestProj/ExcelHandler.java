@@ -7,9 +7,12 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -26,14 +29,17 @@ public class ExcelHandler {
 	static Row row11;
 	//telephone number positive validation scenario
 	public void telephonevalidation(String z){
+		  CellStyle style = workbook.createCellStyle();
 		Cell cust_json = ExcelHandler.row.createCell(1);
 		 cust_json.setCellValue(z);
 		 Cell cust_pdf = ExcelHandler.row.createCell(2);
 		 cust_pdf.setCellValue(z);
 	      Cell custome_message = ExcelHandler.row.createCell(3);
+	      style.setWrapText(true);
 		 custome_message.setCellValue("Telephone number is present and matches with the json");
 		 Cell color_val = row.createCell(5);
 		  color_val.setCellValue("PASS"); 
+		  
 		 try {
 				outputStream = new FileOutputStream(p.getProperty("Write_Excel"));
 				workbook.write(outputStream);
@@ -214,12 +220,16 @@ public void displayNameInvalidation(String displayName){
 		 }
 
 		//Header Section ---scope to iterate
-		 //Headers section
+		 //Headers sectionHSSFFont font = wb.createFont();
+		 XSSFCellStyle style = workbook.createCellStyle();
+		 XSSFFont font=workbook.createFont();
+		 font.setBold(true);
+		 style.setFont(font);
 		 Row rowtitle = sheet.createRow(0);
 		 Cell FieldValue = rowtitle.createCell(0);
-		 FieldValue.setCellValue("FieldValue");
+		 FieldValue.setCellValue("Field Value");
 		 Cell JsonValue = rowtitle.createCell(1);
-		 JsonValue.setCellValue("Json Value");
+		 JsonValue.setCellValue("JSON Value");
 		 Cell PdfValue = rowtitle.createCell(2);
 		 PdfValue.setCellValue("PDF value");
 		 Cell Result = rowtitle.createCell(3);
@@ -227,7 +237,9 @@ public void displayNameInvalidation(String displayName){
 		 Cell Remarks = rowtitle.createCell(4);
 		 Remarks.setCellValue("Remarks");
 		 Cell status = rowtitle.createCell(5);
-		 status.setCellValue("Status");
+		 status.setCellValue("STATUS");
+		 for(int j = 0; j<=5; j++)
+			 rowtitle.getCell(j).setCellStyle(style);
 		 
 		 
 		 // Row Creation Section
