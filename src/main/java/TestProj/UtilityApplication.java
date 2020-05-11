@@ -7,10 +7,11 @@ import java.util.Scanner;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.Test;
 
-public class UtilityApplication extends ExcelHandler {
+public class UtilityApplication  {
 	public UtilityApplication(String next) {
-		super(next);
+		super();
 		// TODO Auto-generated constructor stub
 	}
 	static ArrayList<String> commonList = new ArrayList<String>();
@@ -18,11 +19,12 @@ public class UtilityApplication extends ExcelHandler {
 	static XSSFWorkbook workbook;
 	static XSSFSheet sheet;
 	static Scanner sc;
-	public static void main(String[] args) {
+	/*public static void main(String args[]){*/
+	@Test
+	public void testExecutionflow(){
 		sc = new Scanner(System.in);
     System.out.println("please enter the Subroutine for which the validation to be performed");
     String next = sc.next();
-   
     JsonRequestReader jsonReader=new JsonRequestReader();	
 	JsonHandler jHandler = new JsonHandler();
 	ExcelHandler eHandler = new ExcelHandler(next);

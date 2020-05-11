@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="8116" started-at="2020-05-11T10:25:27Z" finished-at="2020-05-11T10:25:35Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="8116" started-at="2020-05-11T10:25:27Z" finished-at="2020-05-11T10:25:35Z">
+      <class name="TestProj.UtilityApplication">
+        <test-method status="PASS" signature="testExecutionflow()[pri:0, instance:TestProj.UtilityApplication@5025a98f]" name="testExecutionflow" duration-ms="7182" started-at="2020-05-11T10:25:27Z" finished-at="2020-05-11T10:25:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExecutionflow -->
+      </class> <!-- TestProj.UtilityApplication -->
+      <class name="TestProj.ReportGeneration">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="startReport" is-config="true" duration-ms="160" started-at="2020-05-11T10:25:27Z" finished-at="2020-05-11T10:25:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="TC001_JsonRequest_validation()[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="TC001_JsonRequest_validation" duration-ms="8" started-at="2020-05-11T10:25:34Z" description="Verify if the save button is enabled" finished-at="2020-05-11T10:25:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC001_JsonRequest_validation -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="getResult" is-config="true" duration-ms="8" started-at="2020-05-11T10:25:34Z" finished-at="2020-05-11T10:25:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC001_JsonRequest_validation status=SUCCESS method=ReportGeneration.TC001_JsonRequest_validation()[pri:0, instance:TestProj.ReportGeneration@2d928643] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="TC002_JsonDataGeneration()[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="TC002_JsonDataGeneration" duration-ms="4" started-at="2020-05-11T10:25:34Z" finished-at="2020-05-11T10:25:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC002_JsonDataGeneration -->
+        <test-method status="PASS" signature="TC003_PDFDataGeneration()[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="TC003_PDFDataGeneration" duration-ms="104" started-at="2020-05-11T10:25:34Z" finished-at="2020-05-11T10:25:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC003_PDFDataGeneration -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="getResult" is-config="true" duration-ms="0" started-at="2020-05-11T10:25:34Z" finished-at="2020-05-11T10:25:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC002_JsonDataGeneration status=SUCCESS method=ReportGeneration.TC002_JsonDataGeneration()[pri:0, instance:TestProj.ReportGeneration@2d928643] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="TC004_CommonDataGeneration()[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="TC004_CommonDataGeneration" duration-ms="97" started-at="2020-05-11T10:25:34Z" finished-at="2020-05-11T10:25:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC004_CommonDataGeneration -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="getResult" is-config="true" duration-ms="0" started-at="2020-05-11T10:25:34Z" finished-at="2020-05-11T10:25:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC003_PDFDataGeneration status=SUCCESS method=ReportGeneration.TC003_PDFDataGeneration()[pri:0, instance:TestProj.ReportGeneration@2d928643] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="getResult" is-config="true" duration-ms="0" started-at="2020-05-11T10:25:35Z" finished-at="2020-05-11T10:25:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC004_CommonDataGeneration status=SUCCESS method=ReportGeneration.TC004_CommonDataGeneration()[pri:0, instance:TestProj.ReportGeneration@2d928643] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="FAIL" signature="TC005_ExcelDataValidation()[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="TC005_ExcelDataValidation" duration-ms="141" started-at="2020-05-11T10:25:35Z" finished-at="2020-05-11T10:25:35Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at TestProj.ReportGeneration.TC005_ExcelDataValidation(ReportGeneration.java:176)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC005_ExcelDataValidation -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="endReport" is-config="true" duration-ms="364" started-at="2020-05-11T10:25:35Z" finished-at="2020-05-11T10:25:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:TestProj.ReportGeneration@2d928643]" name="getResult" is-config="true" duration-ms="0" started-at="2020-05-11T10:25:35Z" finished-at="2020-05-11T10:25:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC005_ExcelDataValidation status=FAILURE method=ReportGeneration.TC005_ExcelDataValidation()[pri:0, instance:TestProj.ReportGeneration@2d928643] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- TestProj.ReportGeneration -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

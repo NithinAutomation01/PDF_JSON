@@ -59,8 +59,8 @@ public class JsonHandler {
 		       jsonObj1.add(billamt);
 		       jsonObj1.add(upgradedFee);
 		       jsonObj1.add(displayName);
-		       jsonObj1.add(oldDeviceName);
+		       /*jsonObj1.add(oldDeviceName);
 		       jsonObj1.add(RetailPrice);
 		       jsonObj1.add(CurrentPlanPrice);
-		       jsonObj1.add(totalTaxes);
+		       jsonObj1.add(totalTaxes);*/
 }}

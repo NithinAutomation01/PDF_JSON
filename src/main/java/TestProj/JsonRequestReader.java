@@ -9,14 +9,23 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class JsonRequestReader {
+
+
+public class JsonRequestReader{
 	static JSONObject jsonObject; 
 	static Object obj;
-
+static int statuscode;
+public static ExtentReports report;
+public static ExtentTest logger;
 	
 	public JsonRequestReader(){
   /*   JSONParser parser = new JSONParser ();
@@ -45,12 +54,15 @@ public class JsonRequestReader {
             .post();
             response.prettyPrint();
             int statuscode = response.getStatusCode();*/
-				int statuscode =200;
-            System.out.println(statuscode);
+			 statuscode =200;
+        
+            
             if(statuscode!=200){
             	System.out.println("Application Failed to execute");
-            	System.exit(0);
-            					}
+            	
+            	/*test.log(Status.FAIL,"Failed to generate Proper Json response. Application is terminated!!");*/
+            	
+         }
             
     
     
