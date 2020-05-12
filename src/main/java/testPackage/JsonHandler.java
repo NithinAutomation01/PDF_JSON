@@ -1,4 +1,4 @@
-package TestProj;
+package testPackage;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

@@ -25,6 +25,10 @@ public class UtilityApplication  {
 		sc = new Scanner(System.in);
     System.out.println("please enter the Subroutine for which the validation to be performed");
     String next = sc.next();
+    /*System.out.println("please key in the json location");
+    String json_location = sc.next();
+    System.out.println("please key in the pdf location");
+    String pdf_location = sc.next();*/
     JsonRequestReader jsonReader=new JsonRequestReader();	
 	JsonHandler jHandler = new JsonHandler();
 	ExcelHandler eHandler = new ExcelHandler(next);

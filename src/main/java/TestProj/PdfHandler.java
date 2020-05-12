@@ -14,9 +14,10 @@ public class PdfHandler {
 	static ArrayList<String> pdfObject = new ArrayList<String>();
 	static FileInputStream inStream;
 	public PdfHandler(){
+		Controlsheet cSheet = new Controlsheet();
 		
 		try {
-			inStream = new FileInputStream(".\\driver\\purchaseReceipt_PDF.pdf");
+			inStream = new FileInputStream(Controlsheet.PdfPath);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

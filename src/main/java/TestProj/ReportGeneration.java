@@ -46,7 +46,7 @@ public class ReportGeneration {
 		 @BeforeTest
 		 public void startReport(){
 		
-extent = new ExtentReports (System.getProperty("user.dir") +"/ExtentReporting/STMExtentReport.html", true);
+extent = new ExtentReports (System.getProperty("user.dir") +"/ExtentReporting/ReportGenerated.html", true);
 extent
 .addSystemInfo("Host Name", "Infosys_POC")
 .addSystemInfo("Environment", "Dev Environment")
